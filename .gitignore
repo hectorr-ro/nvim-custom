@@ -1,0 +1,12 @@
+# Neovim
+.local/
+.cache/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+*.swp
+*.swo
+*~
