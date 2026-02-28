@@ -1,4 +1,4 @@
-# 🧛 nvim-custom — Neovim IDE para Desarrollo
+# 🧛 nvim-custom — Neovim IDE for Development
 
 <p align="center">
   <img src="https://img.shields.io/badge/Neovim-0.10%2B-57A143?style=for-the-badge&logo=neovim&logoColor=white" />
@@ -8,131 +8,131 @@
   <img src="https://img.shields.io/badge/Debian%2FUbuntu-A81D33?style=for-the-badge&logo=debian&logoColor=white" />
 </p>
 
-Configuración automatizada de **Neovim como IDE completo**, orientada principalmente al desarrollo en **Python** pero con soporte multi-lenguaje. Incluye tema **Dracula** oscuro, fuente **JetBrainsMono Nerd Font**, **GitHub Copilot**, autocompletado inteligente, depurador integrado, formateadores, linters y mucho más.
+Automated **Neovim as a full-featured IDE** setup, primarily oriented towards **Python** development with multi-language support. Includes **Dracula** dark theme, **JetBrainsMono Nerd Font**, **GitHub Copilot**, intelligent autocompletion, integrated debugger, formatters, linters, and much more.
 
 ---
 
-## ✨ Características
+## ✨ Features
 
-| Categoría | Detalle |
-|-----------|---------|
-| 🎨 **Tema** | Dracula oscuro con colores optimizados |
-| 🔤 **Fuente** | JetBrainsMono Nerd Font (iconos incluidos) |
-| 🐍 **Python** | Pyright + Ruff (LSP), Black + isort (formato), mypy (tipos), debugpy (depuración) |
-| 🌐 **Multi-lenguaje** | TypeScript, Rust, C/C++, Go, Java, Bash, HTML, CSS, JSON, YAML, Docker, TOML |
-| 🤖 **GitHub Copilot** | Integrado con el menú de autocompletado (nvim-cmp) |
-| 📝 **Autocompletado** | nvim-cmp con snippets, LSP, paths, buffer y Copilot |
-| 🔍 **Búsqueda** | Telescope (fuzzy finder para archivos, texto, git, diagnósticos) |
-| 📁 **Explorador** | nvim-tree (sidebar con iconos y estado git) |
-| 🐛 **Depurador** | nvim-dap + UI + breakpoints visuales (Python listo) |
-| ✅ **Linting** | En tiempo real con nvim-lint + Ruff LSP |
-| 🧹 **Formato** | Auto-formato al guardar con conform.nvim |
-| 🔀 **Git** | gitsigns (hunks, blame), vim-fugitive, lazygit integrado |
-| 💻 **Terminal** | Terminales flotantes, horizontales, verticales + Python REPL |
+| Category | Details |
+|----------|---------|
+| 🎨 **Theme** | Dracula dark with optimized colors |
+| 🔤 **Font** | JetBrainsMono Nerd Font (icons included) |
+| 🐍 **Python** | Pyright + Ruff (LSP), Black + isort (formatting), mypy (types), debugpy (debugging) |
+| 🌐 **Multi-language** | TypeScript, Rust, C/C++, Go, Java, Bash, HTML, CSS, JSON, YAML, Docker, TOML |
+| 🤖 **GitHub Copilot** | Integrated with the autocompletion menu (nvim-cmp) |
+| 📝 **Autocompletion** | nvim-cmp with snippets, LSP, paths, buffer, and Copilot |
+| 🔍 **Search** | Telescope (fuzzy finder for files, text, git, diagnostics) |
+| 📁 **Explorer** | nvim-tree (sidebar with icons and git status) |
+| 🐛 **Debugger** | nvim-dap + UI + visual breakpoints (Python ready) |
+| ✅ **Linting** | Real-time with nvim-lint + Ruff LSP |
+| 🧹 **Formatting** | Auto-format on save with conform.nvim |
+| 🔀 **Git** | gitsigns (hunks, blame), vim-fugitive, lazygit integrated |
+| 💻 **Terminal** | Floating, horizontal, vertical terminals + Python REPL |
 | 📊 **UI** | Dashboard, bufferline, lualine, noice, which-key, indent guides |
-| 🎯 **Treesitter** | Syntax highlighting avanzado + text objects + selección incremental |
+| 🎯 **Treesitter** | Advanced syntax highlighting + text objects + incremental selection |
 
 ---
 
-## 📋 Requisitos Previos
+## 📋 Prerequisites
 
-- **Sistema operativo:** Debian, Ubuntu, Linux Mint, Pop!\_OS o derivados
-- **Arquitectura:** x86\_64 o ARM64
-- **Acceso sudo** para instalar paquetes del sistema
-- **Conexión a internet** para descargar dependencias
-- **Git** (se instala automáticamente si no está presente)
+- **Operating system:** Debian, Ubuntu, Linux Mint, Pop!\_OS or derivatives
+- **Architecture:** x86\_64 or ARM64
+- **sudo access** to install system packages
+- **Internet connection** to download dependencies
+- **Git** (installed automatically if not present)
 
-### Opcional
+### Optional
 
-- **Suscripción a GitHub Copilot** (para usar el asistente de IA)
-- **lazygit** (se instala automáticamente)
+- **GitHub Copilot subscription** (to use the AI assistant)
+- **lazygit** (installed automatically)
 
 ---
 
-## 🚀 Instalación Rápida
+## 🚀 Quick Installation
 
 ```bash
-# 1. Clonar el repositorio
-git clone https://github.com/tu-usuario/nvim-custom.git
+# 1. Clone the repository
+git clone https://github.com/your-username/nvim-custom.git
 cd nvim-custom
 
-# 2. Dar permisos de ejecución
+# 2. Make scripts executable
 chmod +x install.sh uninstall.sh
 
-# 3. Ejecutar el instalador
+# 3. Run the installer
 ./install.sh
 ```
 
-El script realizará automáticamente:
+The script will automatically:
 
-1. ✅ Verificar compatibilidad del sistema (Debian/Ubuntu)
-2. ✅ Instalar dependencias del sistema (git, curl, build-essential, ripgrep, fd-find…)
-3. ✅ Instalar Node.js LTS (requerido por algunos LSP y Copilot)
-4. ✅ Instalar Neovim (última versión estable desde GitHub)
-5. ✅ Instalar JetBrainsMono Nerd Font
-6. ✅ Instalar pynvim (proveedor de Python para Neovim)
-7. ✅ Instalar lazygit (interfaz git en terminal)
-8. ✅ Hacer backup de configuración existente (si la hay)
-9. ✅ Desplegar la configuración de Neovim
-10. ✅ Sincronizar plugins e instalar herramientas vía Mason
+1. ✅ Verify system compatibility (Debian/Ubuntu)
+2. ✅ Install system dependencies (git, curl, build-essential, ripgrep, fd-find…)
+3. ✅ Install Node.js LTS (required by some LSPs and Copilot)
+4. ✅ Install Neovim (latest stable release from GitHub)
+5. ✅ Install JetBrainsMono Nerd Font
+6. ✅ Install pynvim (Neovim Python provider)
+7. ✅ Install lazygit (terminal git UI)
+8. ✅ Back up existing configuration (if any)
+9. ✅ Deploy Neovim configuration
+10. ✅ Sync plugins and install tools via Mason
 
 ---
 
-## ⚙️ Pasos Post-Instalación
+## ⚙️ Post-Installation Steps
 
-### 1. Configurar la fuente del terminal
+### 1. Set your terminal font
 
-Debes cambiar la fuente de tu emulador de terminal a **JetBrainsMono Nerd Font** para que los iconos se muestren correctamente.
+You must change your terminal emulator font to **JetBrainsMono Nerd Font** for icons to display correctly.
 
-| Terminal | Cómo cambiar la fuente |
+| Terminal | How to change the font |
 |----------|----------------------|
 | **GNOME Terminal** | Preferences → Profile → Custom font → `JetBrainsMono Nerd Font 12` |
 | **Konsole** | Settings → Edit Profile → Appearance → Font → `JetBrainsMono Nerd Font` |
-| **Alacritty** | Añadir en `~/.config/alacritty/alacritty.toml`: `[font.normal]` → `family = "JetBrainsMono Nerd Font"` |
-| **Kitty** | Añadir en `~/.config/kitty/kitty.conf`: `font_family JetBrainsMono Nerd Font` |
+| **Alacritty** | Add to `~/.config/alacritty/alacritty.toml`: `[font.normal]` → `family = "JetBrainsMono Nerd Font"` |
+| **Kitty** | Add to `~/.config/kitty/kitty.conf`: `font_family JetBrainsMono Nerd Font` |
 | **Tilix** | Preferences → Profile → Font → `JetBrainsMono Nerd Font` |
 | **Windows Terminal** | Settings → Profile → Appearance → Font → `JetBrainsMono Nerd Font` |
 
-### 2. Autenticar GitHub Copilot
+### 2. Authenticate GitHub Copilot
 
-> ⚠️ Requiere una suscripción activa a [GitHub Copilot](https://github.com/features/copilot).
+> ⚠️ Requires an active [GitHub Copilot](https://github.com/features/copilot) subscription.
 
 ```
-1. Abre Neovim:
+1. Open Neovim:
    $ nvim
 
-2. Ejecuta el comando de autenticación:
+2. Run the authentication command:
    :Copilot auth
 
-3. Se abrirá una ventana del navegador con un código de verificación.
+3. A browser window will open with a verification code.
 
-4. Inicia sesión en GitHub y pega el código cuando se te solicite.
+4. Sign in to GitHub and paste the code when prompted.
 
-5. Regresa a Neovim — Copilot estará activo.
+5. Return to Neovim — Copilot will be active.
 
-6. Verifica el estado:
+6. Verify status:
    :Copilot status
 ```
 
-### 3. Verificar la instalación
+### 3. Verify the installation
 
 ```
-1. Abre Neovim:
+1. Open Neovim:
    $ nvim
 
-2. Ejecuta el health check:
+2. Run the health check:
    :checkhealth
 
-3. Revisa que no haya errores críticos en:
+3. Check that there are no critical errors in:
    - Provider (Python, Node.js)
    - Treesitter
    - LSP
    - Mason
 ```
 
-### 4. Primera vez usando Mason
+### 4. First time using Mason
 
-En el primer inicio, Mason descargará e instalará automáticamente los servidores LSP, formateadores y linters configurados. Puedes ver el progreso con:
+On the first launch, Mason will automatically download and install the configured LSP servers, formatters, and linters. You can check the progress with:
 
 ```
 :Mason
@@ -140,107 +140,107 @@ En el primer inicio, Mason descargará e instalará automáticamente los servido
 
 ---
 
-## 🔌 Plugins Incluidos
+## 🔌 Included Plugins
 
 ### Core
 
-| Plugin | Descripción |
+| Plugin | Description |
 |--------|-------------|
-| [lazy.nvim](https://github.com/folke/lazy.nvim) | Gestor de plugins moderno y rápido |
-| [dracula.nvim](https://github.com/Mofiqul/dracula.nvim) | Tema Dracula oscuro |
-| [nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons) | Iconos para archivos |
+| [lazy.nvim](https://github.com/folke/lazy.nvim) | Modern and fast plugin manager |
+| [dracula.nvim](https://github.com/Mofiqul/dracula.nvim) | Dracula dark theme |
+| [nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons) | File icons |
 
-### LSP & Autocompletado
+### LSP & Autocompletion
 
-| Plugin | Descripción |
+| Plugin | Description |
 |--------|-------------|
-| [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) | Configuración de servidores LSP |
-| [mason.nvim](https://github.com/williamboman/mason.nvim) | Instalador portable de LSP/DAP/Linters/Formatters |
-| [mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig.nvim) | Puente Mason ↔ lspconfig |
-| [mason-tool-installer.nvim](https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim) | Auto-instalación de herramientas |
-| [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) | Motor de autocompletado |
-| [cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp) | Fuente LSP para cmp |
-| [cmp-buffer](https://github.com/hrsh7th/cmp-buffer) | Fuente buffer para cmp |
-| [cmp-path](https://github.com/hrsh7th/cmp-path) | Fuente rutas de archivo |
-| [cmp-cmdline](https://github.com/hrsh7th/cmp-cmdline) | Autocompletado en línea de comandos |
-| [LuaSnip](https://github.com/L3MON4D3/LuaSnip) | Motor de snippets |
-| [friendly-snippets](https://github.com/rafamadriz/friendly-snippets) | Colección de snippets estilo VS Code |
-| [lspkind.nvim](https://github.com/onsails/lspkind.nvim) | Iconos en el menú de autocompletado |
+| [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) | LSP server configuration |
+| [mason.nvim](https://github.com/williamboman/mason.nvim) | Portable LSP/DAP/Linter/Formatter installer |
+| [mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig.nvim) | Mason ↔ lspconfig bridge |
+| [mason-tool-installer.nvim](https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim) | Auto-install tools |
+| [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) | Autocompletion engine |
+| [cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp) | LSP source for cmp |
+| [cmp-buffer](https://github.com/hrsh7th/cmp-buffer) | Buffer source for cmp |
+| [cmp-path](https://github.com/hrsh7th/cmp-path) | File path source |
+| [cmp-cmdline](https://github.com/hrsh7th/cmp-cmdline) | Command line autocompletion |
+| [LuaSnip](https://github.com/L3MON4D3/LuaSnip) | Snippet engine |
+| [friendly-snippets](https://github.com/rafamadriz/friendly-snippets) | VS Code-style snippet collection |
+| [lspkind.nvim](https://github.com/onsails/lspkind.nvim) | Icons in the autocompletion menu |
 
 ### GitHub Copilot
 
-| Plugin | Descripción |
+| Plugin | Description |
 |--------|-------------|
-| [copilot.lua](https://github.com/zbirenbaum/copilot.lua) | Cliente de Copilot en Lua |
-| [copilot-cmp](https://github.com/zbirenbaum/copilot-cmp) | Integración Copilot → nvim-cmp |
+| [copilot.lua](https://github.com/zbirenbaum/copilot.lua) | Copilot client in Lua |
+| [copilot-cmp](https://github.com/zbirenbaum/copilot-cmp) | Copilot → nvim-cmp integration |
 
-### Sintaxis & Navegación
+### Syntax & Navigation
 
-| Plugin | Descripción |
+| Plugin | Description |
 |--------|-------------|
-| [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) | Syntax highlighting avanzado |
-| [nvim-treesitter-textobjects](https://github.com/nvim-treesitter/nvim-treesitter-textobjects) | Text objects para funciones, clases, parámetros |
-| [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) | Fuzzy finder universal |
-| [telescope-fzf-native.nvim](https://github.com/nvim-telescope/telescope-fzf-native.nvim) | Algoritmo FZF nativo para Telescope |
-| [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua) | Explorador de archivos lateral |
+| [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) | Advanced syntax highlighting |
+| [nvim-treesitter-textobjects](https://github.com/nvim-treesitter/nvim-treesitter-textobjects) | Text objects for functions, classes, parameters |
+| [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) | Universal fuzzy finder |
+| [telescope-fzf-native.nvim](https://github.com/nvim-telescope/telescope-fzf-native.nvim) | Native FZF algorithm for Telescope |
+| [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua) | Sidebar file explorer |
 
-### Formato & Linting
+### Formatting & Linting
 
-| Plugin | Descripción |
+| Plugin | Description |
 |--------|-------------|
-| [conform.nvim](https://github.com/stevearc/conform.nvim) | Formateador (black, isort, prettier, stylua…) |
-| [nvim-lint](https://github.com/mfussenegger/nvim-lint) | Linter asíncrono (mypy, eslint, shellcheck…) |
+| [conform.nvim](https://github.com/stevearc/conform.nvim) | Formatter (black, isort, prettier, stylua…) |
+| [nvim-lint](https://github.com/mfussenegger/nvim-lint) | Async linter (mypy, eslint, shellcheck…) |
 
 ### Git
 
-| Plugin | Descripción |
+| Plugin | Description |
 |--------|-------------|
-| [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) | Indicadores git, blame, hunks |
-| [vim-fugitive](https://github.com/tpope/vim-fugitive) | Comandos git dentro de Neovim |
+| [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) | Git indicators, blame, hunks |
+| [vim-fugitive](https://github.com/tpope/vim-fugitive) | Git commands inside Neovim |
 
-### Depuración
+### Debugging
 
-| Plugin | Descripción |
+| Plugin | Description |
 |--------|-------------|
 | [nvim-dap](https://github.com/mfussenegger/nvim-dap) | Debug Adapter Protocol |
-| [nvim-dap-ui](https://github.com/rcarriga/nvim-dap-ui) | Interfaz gráfica para DAP |
-| [nvim-dap-python](https://github.com/mfussenegger/nvim-dap-python) | Configuración DAP para Python |
-| [nvim-dap-virtual-text](https://github.com/theHamsta/nvim-dap-virtual-text) | Valores de variables inline |
+| [nvim-dap-ui](https://github.com/rcarriga/nvim-dap-ui) | Graphical DAP interface |
+| [nvim-dap-python](https://github.com/mfussenegger/nvim-dap-python) | DAP configuration for Python |
+| [nvim-dap-virtual-text](https://github.com/theHamsta/nvim-dap-virtual-text) | Inline variable values |
 
-### UI & Experiencia
+### UI & Experience
 
-| Plugin | Descripción |
+| Plugin | Description |
 |--------|-------------|
-| [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) | Barra de estado (Dracula) |
-| [bufferline.nvim](https://github.com/akinsho/bufferline.nvim) | Pestañas de buffers |
-| [alpha-nvim](https://github.com/goolord/alpha-nvim) | Dashboard de inicio |
-| [noice.nvim](https://github.com/folke/noice.nvim) | UI mejorada para mensajes/cmdline |
-| [nvim-notify](https://github.com/rcarriga/nvim-notify) | Notificaciones bonitas |
-| [which-key.nvim](https://github.com/folke/which-key.nvim) | Cheatsheet de atajos en tiempo real |
-| [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim) | Guías de indentación |
-| [nvim-colorizer.lua](https://github.com/NvChad/nvim-colorizer.lua) | Previsualización de colores inline |
-| [todo-comments.nvim](https://github.com/folke/todo-comments.nvim) | Resaltado de TODO, FIXME, HACK… |
-| [toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim) | Terminales integradas |
+| [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) | Status bar (Dracula) |
+| [bufferline.nvim](https://github.com/akinsho/bufferline.nvim) | Buffer tabs |
+| [alpha-nvim](https://github.com/goolord/alpha-nvim) | Start dashboard |
+| [noice.nvim](https://github.com/folke/noice.nvim) | Enhanced UI for messages/cmdline |
+| [nvim-notify](https://github.com/rcarriga/nvim-notify) | Pretty notifications |
+| [which-key.nvim](https://github.com/folke/which-key.nvim) | Real-time keybinding cheatsheet |
+| [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim) | Indentation guides |
+| [nvim-colorizer.lua](https://github.com/NvChad/nvim-colorizer.lua) | Inline color preview |
+| [todo-comments.nvim](https://github.com/folke/todo-comments.nvim) | Highlight TODO, FIXME, HACK… |
+| [toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim) | Integrated terminals |
 
 ### Editor
 
-| Plugin | Descripción |
+| Plugin | Description |
 |--------|-------------|
-| [nvim-autopairs](https://github.com/windwp/nvim-autopairs) | Cierre automático de paréntesis, comillas… |
-| [Comment.nvim](https://github.com/numToStr/Comment.nvim) | Comentar/descomentar con `gc` |
-| [nvim-surround](https://github.com/kylechui/nvim-surround) | Operaciones con delimitadores (cambiar, borrar, añadir) |
-| [vim-illuminate](https://github.com/RRethy/vim-illuminate) | Resaltar palabra bajo el cursor |
-| [trouble.nvim](https://github.com/folke/trouble.nvim) | Lista de diagnósticos mejorada |
-| [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim) | Preview de Markdown en el navegador |
+| [nvim-autopairs](https://github.com/windwp/nvim-autopairs) | Auto-close brackets, quotes… |
+| [Comment.nvim](https://github.com/numToStr/Comment.nvim) | Toggle comments with `gc` |
+| [nvim-surround](https://github.com/kylechui/nvim-surround) | Surround operations (change, delete, add) |
+| [vim-illuminate](https://github.com/RRethy/vim-illuminate) | Highlight word under cursor |
+| [trouble.nvim](https://github.com/folke/trouble.nvim) | Enhanced diagnostics list |
+| [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim) | Markdown preview in browser |
 
 ---
 
-## Servidores LSP Instalados
+## Installed LSP Servers
 
-| Servidor | Lenguaje |
-|----------|----------|
-| `pyright` | Python (tipos + intellisense) |
-| `ruff` | Python (linting rápido) |
+| Server | Language |
+|--------|----------|
+| `pyright` | Python (types + intellisense) |
+| `ruff` | Python (fast linting) |
 | `lua_ls` | Lua |
 | `ts_ls` | TypeScript / JavaScript |
 | `rust_analyzer` | Rust |
@@ -255,399 +255,399 @@ En el primer inicio, Mason descargará e instalará automáticamente los servido
 
 ---
 
-## ⌨️ Guía de Atajos de Teclado
+## ⌨️ Keyboard Shortcuts Guide
 
-> **Tecla líder (Leader):** `Espacio`
+> **Leader key:** `Space`
 >
-> **Modos:** `N` = Normal, `I` = Insert, `V` = Visual, `T` = Terminal, `X` = Visual block, `O` = Operator
+> **Modes:** `N` = Normal, `I` = Insert, `V` = Visual, `T` = Terminal, `X` = Visual block, `O` = Operator
 
 ### General
 
-| Atajo | Modo | Acción |
-|-------|------|--------|
-| `jk` / `jj` | I | Salir del modo inserción |
-| `<leader>w` | N | Guardar archivo |
-| `<leader>W` | N | Guardar todos los archivos |
-| `<leader>q` | N | Cerrar ventana |
-| `<leader>Q` | N | Forzar cierre de todo |
-| `<leader>nh` | N | Limpiar resaltado de búsqueda |
-| `<C-a>` | N | Seleccionar todo |
-| `u` | N | Deshacer |
-| `<C-r>` | N | Rehacer |
+| Shortcut | Mode | Action |
+|----------|------|--------|
+| `jk` / `jj` | I | Exit insert mode |
+| `<leader>w` | N | Save file |
+| `<leader>W` | N | Save all files |
+| `<leader>q` | N | Quit window |
+| `<leader>Q` | N | Force quit all |
+| `<leader>nh` | N | Clear search highlight |
+| `<C-a>` | N | Select all |
+| `u` | N | Undo |
+| `<C-r>` | N | Redo |
 
-### Navegación de Ventanas
+### Window Navigation
 
-| Atajo | Modo | Acción |
-|-------|------|--------|
-| `<C-h>` | N | Mover a ventana izquierda |
-| `<C-j>` | N | Mover a ventana inferior |
-| `<C-k>` | N | Mover a ventana superior |
-| `<C-l>` | N | Mover a ventana derecha |
-| `<C-Up>` | N | Aumentar altura |
-| `<C-Down>` | N | Reducir altura |
-| `<C-Left>` | N | Reducir anchura |
-| `<C-Right>` | N | Aumentar anchura |
+| Shortcut | Mode | Action |
+|----------|------|--------|
+| `<C-h>` | N | Move to left window |
+| `<C-j>` | N | Move to lower window |
+| `<C-k>` | N | Move to upper window |
+| `<C-l>` | N | Move to right window |
+| `<C-Up>` | N | Increase height |
+| `<C-Down>` | N | Decrease height |
+| `<C-Left>` | N | Decrease width |
+| `<C-Right>` | N | Increase width |
 
-### Splits (Divisiones)
+### Splits
 
-| Atajo | Modo | Acción |
-|-------|------|--------|
-| `<leader>sv` | N | Split vertical |
-| `<leader>sh` | N | Split horizontal |
-| `<leader>se` | N | Igualar tamaño de splits |
-| `<leader>sx` | N | Cerrar split actual |
+| Shortcut | Mode | Action |
+|----------|------|--------|
+| `<leader>sv` | N | Vertical split |
+| `<leader>sh` | N | Horizontal split |
+| `<leader>se` | N | Equalize split sizes |
+| `<leader>sx` | N | Close current split |
 
-### Buffers (Pestañas)
+### Buffers (Tabs)
 
-| Atajo | Modo | Acción |
-|-------|------|--------|
-| `<Tab>` | N | Buffer siguiente |
-| `<S-Tab>` | N | Buffer anterior |
-| `<leader>bd` | N | Cerrar buffer |
-| `<leader>bD` | N | Cerrar todos los buffers |
-| `<leader>bp` | N | Fijar/Desfijar buffer |
-| `<leader>bo` | N | Cerrar los demás buffers |
+| Shortcut | Mode | Action |
+|----------|------|--------|
+| `<Tab>` | N | Next buffer |
+| `<S-Tab>` | N | Previous buffer |
+| `<leader>bd` | N | Close buffer |
+| `<leader>bD` | N | Close all buffers |
+| `<leader>bp` | N | Pin/Unpin buffer |
+| `<leader>bo` | N | Close other buffers |
 
-### Explorador de Archivos (nvim-tree)
+### File Explorer (nvim-tree)
 
-| Atajo | Modo | Acción |
-|-------|------|--------|
-| `<leader>e` | N | Abrir/cerrar explorador |
-| `<leader>E` | N | Enfocar explorador |
-| `a` | — | Crear archivo/directorio (dentro del explorador) |
-| `d` | — | Eliminar archivo (dentro del explorador) |
-| `r` | — | Renombrar archivo (dentro del explorador) |
-| `x` | — | Cortar archivo |
-| `c` | — | Copiar archivo |
-| `p` | — | Pegar archivo |
+| Shortcut | Mode | Action |
+|----------|------|--------|
+| `<leader>e` | N | Toggle file explorer |
+| `<leader>E` | N | Focus file explorer |
+| `a` | — | Create file/directory (inside explorer) |
+| `d` | — | Delete file (inside explorer) |
+| `r` | — | Rename file (inside explorer) |
+| `x` | — | Cut file |
+| `c` | — | Copy file |
+| `p` | — | Paste file |
 
-### Búsqueda (Telescope)
+### Search (Telescope)
 
-| Atajo | Modo | Acción |
-|-------|------|--------|
-| `<leader>ff` | N | Buscar archivos |
-| `<leader>fg` | N | Buscar texto (live grep) |
-| `<leader>fb` | N | Buscar buffers abiertos |
-| `<leader>fh` | N | Buscar en ayuda |
-| `<leader>fr` | N | Archivos recientes |
-| `<leader>fs` | N | Buscar palabra bajo el cursor |
-| `<leader>fd` | N | Buscar diagnósticos |
-| `<leader>fc` | N | Commits de git |
-| `<leader>fS` | N | Estado de git |
-| `<leader>ft` | N | Buscar TODOs |
+| Shortcut | Mode | Action |
+|----------|------|--------|
+| `<leader>ff` | N | Find files |
+| `<leader>fg` | N | Live grep (search text) |
+| `<leader>fb` | N | Find open buffers |
+| `<leader>fh` | N | Search help tags |
+| `<leader>fr` | N | Recent files |
+| `<leader>fs` | N | Find string under cursor |
+| `<leader>fd` | N | Find diagnostics |
+| `<leader>fc` | N | Git commits |
+| `<leader>fS` | N | Git status |
+| `<leader>ft` | N | Find TODOs |
 
 ### LSP (Language Server Protocol)
 
-| Atajo | Modo | Acción |
-|-------|------|--------|
-| `gd` | N | Ir a la definición |
-| `gD` | N | Ir a la declaración |
-| `gi` | N | Ir a la implementación |
-| `gr` | N | Ver referencias |
-| `K` | N | Documentación hover |
-| `<leader>ca` | N | Acción de código (code action) |
-| `<leader>rn` | N | Renombrar símbolo |
-| `<leader>ld` | N | Diagnósticos de la línea |
-| `<leader>ls` | N | Ayuda de firma (signature help) |
-| `<leader>lt` | N | Ir a definición de tipo |
-| `[d` | N | Diagnóstico anterior |
-| `]d` | N | Diagnóstico siguiente |
+| Shortcut | Mode | Action |
+|----------|------|--------|
+| `gd` | N | Go to definition |
+| `gD` | N | Go to declaration |
+| `gi` | N | Go to implementation |
+| `gr` | N | View references |
+| `K` | N | Hover documentation |
+| `<leader>ca` | N | Code action |
+| `<leader>rn` | N | Rename symbol |
+| `<leader>ld` | N | Line diagnostics |
+| `<leader>ls` | N | Signature help |
+| `<leader>lt` | N | Go to type definition |
+| `[d` | N | Previous diagnostic |
+| `]d` | N | Next diagnostic |
 
-### Formato y Linting
+### Formatting & Linting
 
-| Atajo | Modo | Acción |
-|-------|------|--------|
-| `<leader>lf` | N/V | Formatear archivo o selección |
-| `<leader>ll` | N | Ejecutar linting manualmente |
-| *(auto)* | — | Formato automático al guardar |
-| *(auto)* | — | Linting al entrar/guardar/salir de inserción |
+| Shortcut | Mode | Action |
+|----------|------|--------|
+| `<leader>lf` | N/V | Format file or selection |
+| `<leader>ll` | N | Trigger linting manually |
+| *(auto)* | — | Auto-format on save |
+| *(auto)* | — | Lint on enter/save/leave insert |
 
 ### Git
 
-| Atajo | Modo | Acción |
-|-------|------|--------|
-| `<leader>gg` | N | Abrir lazygit (interfaz git completa) |
-| `<leader>gp` | N | Previsualizar hunk |
-| `<leader>gs` | N | Añadir hunk al stage |
-| `<leader>gr` | N | Revertir hunk |
-| `<leader>gS` | N | Añadir buffer completo al stage |
-| `<leader>gR` | N | Revertir buffer completo |
-| `<leader>gb` | N | Mostrar blame de la línea |
-| `<leader>gd` | N | Diff del archivo |
-| `]h` | N | Siguiente hunk |
-| `[h` | N | Hunk anterior |
+| Shortcut | Mode | Action |
+|----------|------|--------|
+| `<leader>gg` | N | Open lazygit (full git UI) |
+| `<leader>gp` | N | Preview hunk |
+| `<leader>gs` | N | Stage hunk |
+| `<leader>gr` | N | Reset hunk |
+| `<leader>gS` | N | Stage entire buffer |
+| `<leader>gR` | N | Reset entire buffer |
+| `<leader>gb` | N | Show line blame |
+| `<leader>gd` | N | Diff this file |
+| `]h` | N | Next hunk |
+| `[h` | N | Previous hunk |
 
 ### Terminal
 
-| Atajo | Modo | Acción |
-|-------|------|--------|
-| `<C-\>` | N | Abrir/cerrar terminal flotante |
-| `<leader>tf` | N | Terminal flotante |
-| `<leader>th` | N | Terminal horizontal |
-| `<leader>tv` | N | Terminal vertical |
-| `<leader>tp` | N | REPL de Python |
-| `<Esc>` | T | Salir del modo terminal |
-| `<C-h/j/k/l>` | T | Navegar entre ventanas desde terminal |
+| Shortcut | Mode | Action |
+|----------|------|--------|
+| `<C-\>` | N | Toggle floating terminal |
+| `<leader>tf` | N | Floating terminal |
+| `<leader>th` | N | Horizontal terminal |
+| `<leader>tv` | N | Vertical terminal |
+| `<leader>tp` | N | Python REPL |
+| `<Esc>` | T | Exit terminal mode |
+| `<C-h/j/k/l>` | T | Navigate between windows from terminal |
 
-### Depuración (DAP)
+### Debugging (DAP)
 
-| Atajo | Modo | Acción |
-|-------|------|--------|
-| `<leader>db` | N | Poner/quitar breakpoint |
-| `<leader>dB` | N | Breakpoint condicional |
-| `<leader>dc` | N | Continuar ejecución |
-| `<leader>di` | N | Step into (entrar en función) |
-| `<leader>do` | N | Step over (siguiente línea) |
-| `<leader>dO` | N | Step out (salir de función) |
-| `<leader>dr` | N | Abrir/cerrar REPL del debugger |
-| `<leader>dl` | N | Ejecutar última sesión de debug |
-| `<leader>du` | N | Abrir/cerrar UI del debugger |
-| `<leader>dx` | N | Terminar sesión de debug |
+| Shortcut | Mode | Action |
+|----------|------|--------|
+| `<leader>db` | N | Toggle breakpoint |
+| `<leader>dB` | N | Conditional breakpoint |
+| `<leader>dc` | N | Continue execution |
+| `<leader>di` | N | Step into |
+| `<leader>do` | N | Step over |
+| `<leader>dO` | N | Step out |
+| `<leader>dr` | N | Toggle debugger REPL |
+| `<leader>dl` | N | Run last debug session |
+| `<leader>du` | N | Toggle DAP UI |
+| `<leader>dx` | N | Terminate debug session |
 
-### Autocompletado (nvim-cmp)
+### Autocompletion (nvim-cmp)
 
-| Atajo | Modo | Acción |
-|-------|------|--------|
-| `<C-Space>` | I | Abrir menú de autocompletado |
-| `<CR>` (Enter) | I | Confirmar selección |
-| `<Tab>` | I | Siguiente item / expandir snippet |
-| `<S-Tab>` | I | Item anterior |
-| `<C-b>` | I | Scroll arriba en documentación |
-| `<C-f>` | I | Scroll abajo en documentación |
-| `<C-e>` | I | Cerrar menú de autocompletado |
+| Shortcut | Mode | Action |
+|----------|------|--------|
+| `<C-Space>` | I | Open autocompletion menu |
+| `<CR>` (Enter) | I | Confirm selection |
+| `<Tab>` | I | Next item / expand snippet |
+| `<S-Tab>` | I | Previous item |
+| `<C-b>` | I | Scroll docs up |
+| `<C-f>` | I | Scroll docs down |
+| `<C-e>` | I | Close autocompletion menu |
 
-### Edición
+### Editing
 
-| Atajo | Modo | Acción |
-|-------|------|--------|
-| `gc` | N/V | Comentar/descomentar (toggle) |
-| `gcc` | N | Comentar/descomentar línea |
-| `J` | V | Mover línea(s) hacia abajo |
-| `K` | V | Mover línea(s) hacia arriba |
-| `<` | V | Reducir indentación (mantiene selección) |
-| `>` | V | Aumentar indentación (mantiene selección) |
-| `<leader>p` | X | Pegar sin perder el registro |
-| `<leader>y` | N/V | Copiar al portapapeles del sistema |
-| `<leader>Y` | N | Copiar línea al portapapeles |
-| `<leader>D` | N/V | Borrar sin guardar en registro |
+| Shortcut | Mode | Action |
+|----------|------|--------|
+| `gc` | N/V | Toggle comment |
+| `gcc` | N | Toggle line comment |
+| `J` | V | Move line(s) down |
+| `K` | V | Move line(s) up |
+| `<` | V | Decrease indent (keeps selection) |
+| `>` | V | Increase indent (keeps selection) |
+| `<leader>p` | X | Paste without overriding register |
+| `<leader>y` | N/V | Yank to system clipboard |
+| `<leader>Y` | N | Yank line to system clipboard |
+| `<leader>D` | N/V | Delete without yanking |
 
 ### Treesitter (Text Objects)
 
-| Atajo | Modo | Acción |
-|-------|------|--------|
-| `<C-Space>` | N | Iniciar/incrementar selección |
-| `<BS>` | N | Decrementar selección |
-| `af` / `if` | O/V | Seleccionar función (outer/inner) |
-| `ac` / `ic` | O/V | Seleccionar clase (outer/inner) |
-| `aa` / `ia` | O/V | Seleccionar parámetro (outer/inner) |
-| `]m` / `[m` | N | Siguiente/anterior función |
-| `]]` / `[[` | N | Siguiente/anterior clase |
-| `<leader>a` | N | Intercambiar parámetro con siguiente |
-| `<leader>A` | N | Intercambiar parámetro con anterior |
+| Shortcut | Mode | Action |
+|----------|------|--------|
+| `<C-Space>` | N | Start/increment selection |
+| `<BS>` | N | Decrement selection |
+| `af` / `if` | O/V | Select function (outer/inner) |
+| `ac` / `ic` | O/V | Select class (outer/inner) |
+| `aa` / `ia` | O/V | Select parameter (outer/inner) |
+| `]m` / `[m` | N | Next/previous function |
+| `]]` / `[[` | N | Next/previous class |
+| `<leader>a` | N | Swap parameter with next |
+| `<leader>A` | N | Swap parameter with previous |
 
-### Diagnósticos (Trouble)
+### Diagnostics (Trouble)
 
-| Atajo | Modo | Acción |
-|-------|------|--------|
-| `<leader>xx` | N | Toggle lista de diagnósticos |
-| `<leader>xd` | N | Diagnósticos del buffer actual |
+| Shortcut | Mode | Action |
+|----------|------|--------|
+| `<leader>xx` | N | Toggle diagnostics list |
+| `<leader>xd` | N | Current buffer diagnostics |
 | `<leader>xl` | N | Location list |
 | `<leader>xq` | N | Quickfix list |
 
-### Surround (Delimitadores)
+### Surround (Delimiters)
 
-| Atajo | Modo | Acción |
-|-------|------|--------|
-| `ys{motion}{char}` | N | Añadir delimitador (ej: `ysiw"` → rodea palabra con `"`) |
-| `ds{char}` | N | Borrar delimitador (ej: `ds"` → quita `"`) |
-| `cs{old}{new}` | N | Cambiar delimitador (ej: `cs"'` → cambia `"` por `'`) |
+| Shortcut | Mode | Action |
+|----------|------|--------|
+| `ys{motion}{char}` | N | Add delimiter (e.g., `ysiw"` → surround word with `"`) |
+| `ds{char}` | N | Delete delimiter (e.g., `ds"` → remove `"`) |
+| `cs{old}{new}` | N | Change delimiter (e.g., `cs"'` → change `"` to `'`) |
 
-### Navegación Rápida
+### Quick Navigation
 
-| Atajo | Modo | Acción |
-|-------|------|--------|
-| `<C-d>` | N | Scroll media página abajo (centrado) |
-| `<C-u>` | N | Scroll media página arriba (centrado) |
-| `n` / `N` | N | Siguiente/anterior resultado de búsqueda (centrado) |
-| `]q` / `[q` | N | Siguiente/anterior quickfix |
-| `]l` / `[l` | N | Siguiente/anterior location list |
+| Shortcut | Mode | Action |
+|----------|------|--------|
+| `<C-d>` | N | Scroll half page down (centered) |
+| `<C-u>` | N | Scroll half page up (centered) |
+| `n` / `N` | N | Next/previous search result (centered) |
+| `]q` / `[q` | N | Next/previous quickfix |
+| `]l` / `[l` | N | Next/previous location list |
 
 ### WhichKey
 
-| Atajo | Modo | Acción |
-|-------|------|--------|
-| `<Space>` | N | Muestra TODOS los atajos disponibles |
+| Shortcut | Mode | Action |
+|----------|------|--------|
+| `<Space>` | N | Show ALL available keybindings |
 
-> 💡 **Tip:** Presiona `<Space>` y espera — **WhichKey** mostrará un panel con todos los atajos organizados por categoría.
+> 💡 **Tip:** Press `<Space>` and wait — **WhichKey** will display a panel with all shortcuts organized by category.
 
 ---
 
-## 🐍 Características Específicas para Python
+## 🐍 Python-Specific Features
 
-- **Pyright** como servidor LSP principal para Python: autocompletado, go-to-definition, renombrado inteligente, diagnósticos de tipo
-- **Ruff** como linter LSP: extremadamente rápido, reemplaza flake8/pylint
-- **Black** como formateador (88 columnas por defecto)
-- **isort** para organizar imports automáticamente
-- **mypy** para verificación estricta de tipos
-- **debugpy** para depuración paso a paso con UI integrada
-- Línea guía en columna 88 (estándar Black)
-- Indentación de 4 espacios automática
-- REPL de Python accesible con `<leader>tp`
-- Soporte para virtualenvs (Pyright los detecta automáticamente)
+- **Pyright** as the main Python LSP server: autocompletion, go-to-definition, smart rename, type diagnostics
+- **Ruff** as LSP linter: extremely fast, replaces flake8/pylint
+- **Black** as formatter (88 columns by default)
+- **isort** to organize imports automatically
+- **mypy** for strict type checking
+- **debugpy** for step-by-step debugging with integrated UI
+- Guide line at column 88 (Black standard)
+- Automatic 4-space indentation
+- Python REPL accessible with `<leader>tp`
+- Virtualenv support (Pyright detects them automatically)
 
-### Configurar un virtualenv
+### Setting up a virtualenv
 
 ```bash
-# Crear virtualenv
+# Create virtualenv
 python3 -m venv .venv
 
-# Activarlo antes de abrir Neovim
+# Activate it before opening Neovim
 source .venv/bin/activate
 
-# Abrir Neovim — Pyright detectará el venv automáticamente
+# Open Neovim — Pyright will detect the venv automatically
 nvim
 ```
 
 ---
 
-## 🎨 Personalización
+## 🎨 Customization
 
-### Cambiar el tema
+### Change the theme
 
-Edita `~/.config/nvim/lua/plugins/theme.lua` y cambia el plugin/colorscheme.
+Edit `~/.config/nvim/lua/plugins/theme.lua` and change the plugin/colorscheme.
 
-### Añadir un nuevo servidor LSP
+### Add a new LSP server
 
-1. Añádelo a la lista en `~/.config/nvim/lua/plugins/lsp.lua` → `ensure_installed`
-2. Configúralo con `lspconfig.nombre.setup({ ... })`
+1. Add it to the list in `~/.config/nvim/lua/plugins/lsp.lua` → `ensure_installed`
+2. Configure it with `lspconfig.name.setup({ ... })`
 
-### Añadir un formateador/linter
+### Add a formatter/linter
 
-1. Añádelo a `~/.config/nvim/lua/plugins/lint-format.lua` → `ensure_installed` (Mason)
-2. Configúralo en `formatters_by_ft` (conform) o `linters_by_ft` (nvim-lint)
+1. Add it to `~/.config/nvim/lua/plugins/lint-format.lua` → `ensure_installed` (Mason)
+2. Configure it in `formatters_by_ft` (conform) or `linters_by_ft` (nvim-lint)
 
-### Cambiar la indentación
+### Change indentation
 
-Edita `~/.config/nvim/lua/config/options.lua` → `tabstop` y `shiftwidth`.
+Edit `~/.config/nvim/lua/config/options.lua` → `tabstop` and `shiftwidth`.
 
-### Gestionar plugins
+### Manage plugins
 
 ```vim
-:Lazy              " Abrir gestor de plugins
-:Lazy sync         " Sincronizar plugins
-:Lazy update       " Actualizar plugins
-:Lazy clean        " Limpiar plugins no usados
-:Mason             " Abrir gestor de herramientas
+:Lazy              " Open plugin manager
+:Lazy sync         " Sync plugins
+:Lazy update       " Update plugins
+:Lazy clean        " Clean unused plugins
+:Mason             " Open tool manager
 ```
 
 ---
 
-## 🔧 Solución de Problemas
+## 🔧 Troubleshooting
 
-### Los iconos no se ven correctamente
+### Icons don't display correctly
 
-→ Asegúrate de haber configurado **JetBrainsMono Nerd Font** como fuente de tu terminal.
+→ Make sure you have set **JetBrainsMono Nerd Font** as your terminal font.
 
-### Copilot no funciona
+### Copilot doesn't work
 
 ```vim
-:Copilot status    " Verificar estado
-:Copilot auth      " Re-autenticar
-:checkhealth       " Verificar que Node.js está disponible
+:Copilot status    " Check status
+:Copilot auth      " Re-authenticate
+:checkhealth       " Verify Node.js is available
 ```
 
-### Un servidor LSP no se instala
+### An LSP server won't install
 
 ```vim
-:Mason             " Abrir Mason
-:MasonLog          " Ver logs de instalación
+:Mason             " Open Mason
+:MasonLog          " View installation logs
 ```
 
-### El formato no se aplica al guardar
+### Format on save doesn't work
 
 ```vim
-:ConformInfo       " Ver qué formateador se usa para el archivo actual
+:ConformInfo       " See which formatter is used for the current file
 ```
 
-### Errores al iniciar Neovim por primera vez
+### Errors on first Neovim launch
 
-Es normal que en el primer inicio haya algunos errores mientras se instalan los plugins y herramientas. Cierra y vuelve a abrir Neovim.
+It's normal for the first launch to have some errors while plugins and tools are being installed. Close and reopen Neovim.
 
-### TreeSitter: parser no disponible
+### TreeSitter: parser not available
 
 ```vim
-:TSInstall <lenguaje>    " Instalar parser manualmente
-:TSUpdate                " Actualizar todos los parsers
+:TSInstall <language>    " Install parser manually
+:TSUpdate                " Update all parsers
 ```
 
 ---
 
-## 🗑️ Desinstalación
+## 🗑️ Uninstallation
 
 ```bash
-# Desde el directorio del repositorio
+# From the repository directory
 ./uninstall.sh
 ```
 
-Esto elimina la configuración, plugins y datos de Neovim. **No** desinstala Neovim, la fuente ni las herramientas del sistema.
+This removes the Neovim configuration, plugins, and data. It does **not** uninstall Neovim, the font, or system tools.
 
-Para una desinstalación completa:
+For a complete uninstallation:
 
 ```bash
-# Eliminar Neovim
+# Remove Neovim
 sudo rm -rf /opt/nvim /usr/local/bin/nvim
 
-# Eliminar la fuente
+# Remove the font
 rm -rf ~/.local/share/fonts/JetBrainsMono && fc-cache -fv
 
-# Eliminar lazygit
+# Remove lazygit
 sudo rm -f /usr/local/bin/lazygit
 ```
 
 ---
 
-## 📂 Estructura del Proyecto
+## 📂 Project Structure
 
 ```
 nvim-custom/
-├── install.sh                    # Script de instalación principal
-├── uninstall.sh                  # Script de desinstalación
-├── README.md                     # Este archivo
+├── install.sh                    # Main installation script
+├── uninstall.sh                  # Uninstallation script
+├── README.md                     # This file
 ├── .gitignore
-└── nvim/                         # Configuración de Neovim
-    ├── init.lua                  # Punto de entrada
+└── nvim/                         # Neovim configuration
+    ├── init.lua                  # Entry point
     └── lua/
         ├── config/
-        │   ├── options.lua       # Opciones del editor
-        │   ├── keymaps.lua       # Atajos generales
+        │   ├── options.lua       # Editor options
+        │   ├── keymaps.lua       # General keymaps
         │   ├── autocmds.lua      # Autocommands
-        │   └── lazy.lua          # Bootstrap de lazy.nvim
+        │   └── lazy.lua          # lazy.nvim bootstrap
         └── plugins/
             ├── theme.lua         # Dracula
             ├── treesitter.lua    # Syntax highlighting
             ├── lsp.lua           # LSP + Mason
-            ├── cmp.lua           # Autocompletado
+            ├── cmp.lua           # Autocompletion
             ├── telescope.lua     # Fuzzy finder
-            ├── nvim-tree.lua     # Explorador de archivos
-            ├── lualine.lua       # Barra de estado
-            ├── bufferline.lua    # Pestañas de buffers
+            ├── nvim-tree.lua     # File explorer
+            ├── lualine.lua       # Status bar
+            ├── bufferline.lua    # Buffer tabs
             ├── gitsigns.lua      # Git decorations
-            ├── toggleterm.lua    # Terminal integrada
+            ├── toggleterm.lua    # Integrated terminal
             ├── copilot.lua       # GitHub Copilot
             ├── dap.lua           # Debugger
-            ├── lint-format.lua   # Formateo + Linting
+            ├── lint-format.lua   # Formatting + Linting
             ├── ui.lua            # Dashboard, indent, noice, which-key
             └── editor.lua        # Auto-pairs, comments, surround, trouble
 ```
 
 ---
 
-## 📜 Licencia
+## 📜 License
 
-MIT — Usa, modifica y comparte libremente.
+MIT — Use, modify, and share freely.
 
 ---
 
 <p align="center">
-  Hecho con 💜 para desarrolladores Python (y no solo Python)
+  Made with 💜 for Python developers (and not only Python)
 </p>
