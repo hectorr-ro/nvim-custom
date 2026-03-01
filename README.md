@@ -53,7 +53,7 @@ Automated **Neovim as a full-featured IDE** setup, primarily oriented towards **
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/your-username/nvim-custom.git
+git clone https://github.com/hectorr-ro/nvim-custom.git
 cd nvim-custom
 
 # 2. Make scripts executable
